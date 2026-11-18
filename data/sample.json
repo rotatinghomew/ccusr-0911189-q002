@@ -1,0 +1,89 @@
+{
+  "collection": "C9",
+  "queries": [
+    {
+      "id": "Q1",
+      "group": "口述",
+      "weight": 2,
+      "cutoff": 2
+    },
+    {
+      "id": "Q2",
+      "group": "报刊",
+      "weight": 1,
+      "cutoff": 2
+    }
+  ],
+  "runs": {
+    "current": {
+      "Q1": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "Q2": [
+        "s5",
+        "s6"
+      ]
+    },
+    "candidate": {
+      "Q1": [
+        "s2",
+        "s3",
+        "s1"
+      ],
+      "Q2": [
+        "s7",
+        "s6"
+      ]
+    }
+  },
+  "judgments": [
+    {
+      "collection": "C9",
+      "query": "Q1",
+      "segment": "s1",
+      "relevant": 1
+    },
+    {
+      "collection": "C9",
+      "query": "Q2",
+      "segment": "s6",
+      "relevant": 0
+    },
+    {
+      "collection": "C8",
+      "query": "Q1",
+      "segment": "s3",
+      "relevant": 0
+    }
+  ],
+  "pending": [
+    {
+      "ticket": "R1",
+      "run": "candidate",
+      "query": "Q1",
+      "segment": "s3",
+      "state": "open",
+      "priority": 2
+    },
+    {
+      "ticket": "R2",
+      "run": "current",
+      "query": "Q2",
+      "segment": "s5",
+      "state": "closed",
+      "priority": 3
+    }
+  ],
+  "policy": {
+    "current": "current",
+    "candidate": "candidate",
+    "overall_floor": 0,
+    "group_floors": {
+      "口述": -0.05,
+      "报刊": -0.1
+    },
+    "review_slots": 1
+  }
+}
